@@ -1,0 +1,23 @@
+#question-modal {
+    display: block;
+    position: absolute;
+
+    z-index: 2;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 100%;
+    height: 100%;
+
+    border: white;
+    background: rgb(29,26,26);
+
+    overflow: clip;
+
+    font-size: 100px;
+}
+

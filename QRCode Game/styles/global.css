@@ -1,0 +1,39 @@
+:root {
+  --border-color: #291D4D;
+  --dialog-background: #FFF3B4;
+
+  --menu-background: #FFE8D2;
+  --menu-border-color: #A48465;
+  --menu-font-color: #3A160D;
+  --menu-selected-background: #ffffff;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #333;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Roboto';
+}
+
+.game-container {
+  position: relative; 
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  outline: 1px solid #fff;
+  transform: scale(1)
+}
+
+.game-container canvas {
+  image-rendering: pixelated;
+  width:100%;
+  height:100%;
+  display: block;
+}
