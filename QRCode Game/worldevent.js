@@ -1,4 +1,9 @@
-class WorldEvent {
+import TextMessage from "./textmessage.js";
+import SceneTransition from "./scenetransition.js";
+import PauseMenu from "./pausemenu.js";
+import { score } from "./quiz/quiz.js";
+
+export default class WorldEvent {
   constructor({ map, event}) {
     this.map = map;
     this.event = event;
@@ -58,7 +63,7 @@ class WorldEvent {
       2: 'Pretty good but there is still room for improvement. You will be redirected to our career page in a moment.',
       3: 'Outstanding. I hope we will see you in near future. You will be redirected to our career page in a moment.'
     }
-    return dictionary[window.score]
+    return dictionary[score]
   }
 
   textMessage(resolve) {
@@ -86,12 +91,20 @@ class WorldEvent {
 
     const completeHandler = (e) => {
       if(!e.isOpen) {
-        document.removeEventListener("PersonWalkingComplete", completeHandler);
         resolve()
       }
     }
 
-    document.addEventListener('modalChange', completeHandler)
+    document.addEventListener('modalChange', completeHandler, {once: true} )
+  }
+
+  redirect(resolve) {
+    if(score == 2 && 3) {
+      window.location.replace("https://almservices.tech/career/")
+    } else {
+      window.location.replace("https://bit.ly/3BlS71b")
+    }
+    resolve();
   }
 
   changeMap(resolve) {

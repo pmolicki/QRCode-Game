@@ -1,4 +1,4 @@
-class Sprite {
+export default class Sprite {
   constructor(config) {
 
     this.image = new Image();

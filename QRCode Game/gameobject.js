@@ -1,4 +1,7 @@
-class GameObject {
+import WorldEvent from "./worldevent.js";
+import Sprite from "./sprite.js";
+
+export default class GameObject {
   constructor(config) {
     this.id = null;
     this.isMounted = false;
@@ -38,7 +41,7 @@ class GameObject {
     let eventConfig = this.behaviorLoop[this.behaviorLoopIndex];
     eventConfig.who = this.id;
 
-    const eventHandler = new OverworldEvent({ map, event: eventConfig });
+    const eventHandler = new WorldEvent({ map, event: eventConfig });
     await eventHandler.init(); 
 
     this.behaviorLoopIndex += 1;

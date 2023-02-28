@@ -26,7 +26,7 @@ body {
 }
 
 .choice-text {
-    padding: 2rem;
+    padding: 1.8rem;
     width: 80%;
 }
 
@@ -41,7 +41,7 @@ body {
 #hud {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
+    margin-top: 0px;
 }
 
 .hud-prefix {
@@ -73,6 +73,6 @@ body {
 
 @media screen and (max-width: 900px) {
     .choice-container {
-        min-width: 40rem;
+        min-width: 240px;
     }
 }

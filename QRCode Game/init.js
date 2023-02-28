@@ -1,4 +1,6 @@
-(function () {
+import World from "./world.js";
+import Modal from "./modal.js";
+
   
   const modal = new Modal(document.querySelector("#question-modal"));
   
@@ -13,4 +15,3 @@
   });
   world.init();
 
-})();

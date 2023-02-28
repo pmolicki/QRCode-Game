@@ -1,4 +1,7 @@
-class TextMessage {
+import KeyListener from "./keylistener.js";
+import RevealingText from "./revealingtext.js";
+
+export default class TextMessage {
   constructor({ text, onComplete, onStart = () => {} }) {
     this.text = text;
     this.onStart = onStart

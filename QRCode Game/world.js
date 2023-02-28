@@ -1,4 +1,10 @@
-class World {
+import DirectionInput from './directioninput.js';
+import WorldMap from "./worldmap.js";
+import KeyListener from "./keylistener.js";
+import Progress from "./progress.js";
+import TitleScreen from "./titlescreen.js";
+
+export default class World {
   constructor(config) {
     this.element = config.element;
     this.canvas = this.element.querySelector(".game-canvas");
@@ -11,8 +17,6 @@ class World {
     const step = () => {
 
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      this.canvas.width = window.innerWidth;
-      this.canvas.height = window.innerHeight;
 
       Object.values(this.map.gameObjects).forEach(object => {
         object.update({
@@ -78,7 +82,6 @@ class World {
     this.progress.startingMainY = this.map.gameObjects.main.y;
     this.progress.startingMainDirection = this.map.gameObjects.main.direction;
 
-    console.log(this.map.walls)
   }
 
   async init() {
@@ -136,6 +139,7 @@ class World {
       },
       {type: "textMessage", text: "Update", shouldUpdate: true},  
       {type: "textMessage", text: "Thank you for playing our mini-game. We wish you a bright future as a programmer. Have a nice day!"},
+      {type: "redirect"},
     ])
   }
 }

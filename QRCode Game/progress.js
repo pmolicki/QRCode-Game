@@ -1,4 +1,4 @@
-class Progress {
+export default class Progress {
     constructor() {
       this.mapId = "Office";
       this.startingMainX = 0;

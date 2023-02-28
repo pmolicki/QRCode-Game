@@ -1,4 +1,8 @@
-class WorldMap {
+import { utils } from "./utils.js";
+import Entity from "./entity.js";
+import WorldEvent from "./worldevent.js";
+
+export default class WorldMap {
   constructor(config) {
     this.world = null;
     this.gameObjects = config.gameObjects;
@@ -15,8 +19,8 @@ class WorldMap {
   drawMainImage(ctx) {
     ctx.drawImage(
       this.mainImage,
-      utils.withGrid(6.5),
-      utils.withGrid(2),
+      utils.withGrid(3.5),
+      utils.withGrid(0),
       )
   }
 
@@ -93,11 +97,11 @@ window.WorldMaps = {
       main: new Entity({
         isPlayer: true,
         x: utils.withGrid(8),
-        y: utils.withGrid(14),
+        y: utils.withGrid(12),
       }),
       officenpc: new Entity({
         x: utils.withGrid(8),
-        y: utils.withGrid(6),
+        y: utils.withGrid(4),
         src: "assets/characters/officenpc.png",
       })
     },

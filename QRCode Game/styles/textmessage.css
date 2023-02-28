@@ -3,7 +3,7 @@
   left: 0;
   right: 0;
   bottom: 0px;
-  height: 60px;
+  height: 120px;
   padding: 4px;
   background: var(--menu-background);
   border-top: 0px solid var(--menu-border-color);
@@ -12,7 +12,10 @@
 }
 .TextMessage_p {
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
+  width: 80%;
+  max-width: 420px;
+  min-width: 220px;
 }
 .TextMessage span {
   opacity: 0;
@@ -23,14 +26,16 @@
 
 .TextMessage_button {
   margin: 0;
-  font-size: 12px;  
+  font-size: 16px;  
   padding:0;
   background:none;
-  border:0;
   font-family: inherit;
   cursor: pointer;
 
   position: absolute;
-  right: 2px;
+  right: 0;
   bottom: 0;
+  border-color:#645e5e;
+  border-width: 10px;
+  border-style:ridge;
 }

@@ -1,4 +1,7 @@
-class PauseMenu {
+import KeyListener from "./keylistener.js";
+import KeyboardMenu from "./keyboardmenu.js";
+
+export default class PauseMenu {
     constructor({progress, onComplete}) {
       this.progress = progress;
       this.onComplete = onComplete;

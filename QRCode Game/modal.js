@@ -1,4 +1,6 @@
-class Modal{
+import { utils } from "./utils.js";
+
+export default class Modal{
   constructor(element) {
     this.element = element;
     this.display = element.dataset.display ?? 'block';

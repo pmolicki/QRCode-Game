@@ -1,4 +1,7 @@
-class Entity extends GameObject {
+import GameObject from "./gameobject.js";
+import { utils } from "./utils.js";
+
+export default class Entity extends GameObject {
   constructor(config) {
     super(config);
     this.movingProgress = 0;

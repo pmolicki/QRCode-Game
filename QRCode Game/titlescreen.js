@@ -1,4 +1,6 @@
-class TitleScreen {
+import KeyboardMenu from "./keyboardmenu.js";
+
+export default class TitleScreen {
     constructor({ progress }) {
         this.progress = progress;
     }
